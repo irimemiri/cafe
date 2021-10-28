@@ -1,0 +1,764 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+/* 標準フォント用 'Noto Sans JP' */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+/* 見出し・タイトル用 'RocknRoll One' */
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+/* 数字用 'Open Sans' */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+/* CSS Document */
+
+/* common settings */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+::selection {
+	background-color: #febd3d;
+	color: #fff;
+}
+
+/* customs */
+
+body {
+	background-image: url("../img/bg_paper.jpg");
+	color: #63441C;
+	font-family: 'Noto Sans JP','ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+	font-size: 1.6rem;
+	text-align: center;
+	line-height: 1.7;
+}
+
+#wrapper {
+	width: 96%;
+	margin: 0 auto;
+}
+
+.head_wrapper, .foot_wrapper {
+	width: 96%;
+	margin: 0 auto;
+}
+
+header {
+	position: relative;
+	background-color: #febd3d;
+	height: calc(100vh - 60px);
+	margin-bottom: 30px;
+}
+
+header .masked_key {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-image: url('../img/key_background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	mask-image: url('../img/egg_mask.png');
+	mask-size: cover;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: url('../img/egg_mask.png');
+	-webkit-mask-size: cover;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+
+header h1 {
+	width: 48.611%; /* 175/360 */
+	margin-bottom: 15px;
+}
+
+.egg_child {
+	position: absolute;
+	top: 8%;
+	right: 10%;
+	width: 40%;
+	background-color: rgba(255,255,255,1); 
+	border-radius: 50% 50% 50% 60% / 58.333% 58.333% 40% 40%;
+	transform: rotate(-20deg);
+	padding: 6%;
+}
+
+.egg_child p {
+	transform: rotate(20deg);
+	letter-spacing: 0.2em;
+}
+
+.egg_catch {
+	position: absolute;
+	bottom: 10%;
+	left: 8%;
+	font-family: 'RocknRoll One', 'sans-serif';
+	font-size: 4.5vw;
+	margin-bottom: 15px;
+	text-align: left;
+	z-index: 10;
+}
+
+.egg_catch span {
+	line-height: 16px;
+	color: #fff;
+	text-shadow: 0 0 4px #734e30;
+	letter-spacing: 1rem;
+}
+
+h2 {
+	font-family: 'RocknRoll One', sans-serif;
+	font-size: 3.2rem;
+	margin-bottom: 8px;
+}
+
+h2 + p {
+	width: 40px;
+	height: 40px;
+	font-size: 2em;
+	text-align: center;
+	line-height: 40px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+h3 {
+	font-family: 'RocknRoll One', 'sans-serif';
+	font-size: 2.4rem;
+	margin-bottom: 15px;
+}
+
+.g_nav {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #eee8c3;
+	box-shadow: 0 0 3px rgba(0,0,0,.4);
+	z-index: 10;
+}
+
+.g_nav ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+.g_nav ul li {
+	flex-grow: 1;
+	text-align: center;
+	border-right: dashed 1px rgba(173,139,106,1.00);
+}
+
+.g_nav ul li:last-child {
+	border-right: none;
+}
+
+.g_nav li a {
+	text-decoration: none;
+	display: block;
+	font-family: 'RocknRoll One','M PLUS Rounded 1c','Kosugi Maru',sans-serif;
+	line-height: 10px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.g_nav li a:link, .g_nav li a:visited {
+	color: #734e30;
+}
+
+.g_nav li a:hover {
+	background-color: #d4cea9;
+}
+
+.g_nav li a svg {
+	width: 33.333%; /* 25/75 */
+	height: 25px;
+	margin-bottom: 0px;
+}
+
+.g_nav li a span {
+	display: block;
+	font-size: .8em;
+	line-height: 20px;
+}
+
+.equation {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.equation .term {
+	width: 25%; /* 90/360 */;
+}
+
+#kodawari section {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+}
+
+#kodawari h3 {
+	margin-bottom: 26px;
+}
+
+#kodawari section .txt {
+	margin-bottom: 30px;
+}
+
+#kodawari, #menu, #togo, #info {
+	margin-bottom: 80px;
+}
+
+#access {
+	margin-bottom: 40px;
+}
+
+.actions {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 80px;
+}
+
+.actions li {
+	position: relative;
+	width: 48.611%; /* 175/360 */
+	background-color: #ffffef;
+	border-radius: 8%;
+	box-shadow: 0px 0px 5px rgba(145, 115, 71,.3);
+	margin-bottom: 40px;
+	padding: 30px 20px 20px;
+}
+
+.tape_b {
+	position: absolute;
+	top: -1em;
+	left: 26%;
+	width: 44.690%;
+	height:30px;
+	background-image: linear-gradient(-45deg, rgba(227,155,140,.4) 25%, transparent 25%, transparent 50%, rgba(227,155,140,.4) 50%, rgba(227,155,140,.4) 75%, transparent 75%, transparent 100%);
+	background-size: 20px 20px;
+	border-left:2px dotted rgba(0,0,0,.1);
+	border-right:2px dotted rgba(0,0,0,.1);
+	box-shadow:0 0 5px rgba(0,0,0,.2);
+	padding: 0.25em 2em;
+	color: #65513f;
+	transform: rotate(-4deg); 
+}
+
+.tape_g {
+	position: absolute;
+	top: -1em;
+	left: 26%;
+	width: 44.690%;
+	height:30px;
+	background-image: linear-gradient(-90deg, rgba(19,28,51,.4) 25%, transparent 25%, transparent 50%, rgba(19,28,51,.4) 50%, rgba(19,28,51,.4) 75%, transparent 75%, transparent 100%), linear-gradient(rgba(19,28,51,.4) 25%, transparent 25%, transparent 50%, rgba(19,28,51,.4) 50%, rgba(19,28,51,.4) 75%, transparent 75%, transparent 100%);
+	background-size: 20px 20px;
+	border-left:2px dotted rgba(0,0,0,.3);
+	border-right:2px dotted rgba(0,0,0,.3);
+	box-shadow:0 0 5px rgba(0,0,0,.3);
+	padding: 0.25em 2em;
+	color: #65513f;
+	transform: rotate(2deg); 
+}
+
+.actions li .icon {
+	width: 71.428%; /* 125/175 */
+	margin: 0 auto 10px;
+}
+
+
+.actions li p {
+	font-size: .8em;
+}
+
+.actions li p span {
+	display: block;
+	font-weight: bold;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-size: 1.2em;
+	line-height: 16px;
+	margin-bottom: 10px;
+}
+
+.all_menu {
+	text-decoration: none;
+	display: block;
+	position: relative;
+	width: 48.611%; /* 175/360 */
+	line-height: 40px;
+	background-color: #eee8c3;
+	border-radius: 8px;
+	font-family: 'RocknRoll One', sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+	letter-spacing: .1em;
+	margin: 0 auto;
+	margin-bottom: 45px;
+	box-shadow: 2px 2px 5px rgba(145, 115, 71,.4);
+	transition: 0s;
+}
+
+.all_menu::before {
+	content: "";
+	position: absolute;
+	left: 1%;
+	top: 3px;
+	width: 98%;
+	height: 2px;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%, transparent 100%);
+	background-size: 12px 4px;
+}
+
+.all_menu::after {
+	content: "";
+	position: absolute;
+	left: 1%;
+	bottom: 3px;
+	width: 98%;
+	height: 2px;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%, transparent 100%);
+	background-size: 12px 4px;
+}
+
+.all_menu:link, .all_menu:visited {
+	color: #6b5b21;
+}
+
+.all_menu:hover {
+	box-shadow: none;
+	position: relative;
+	top: 2px;
+	left: 2px;
+	background-color: #d4cea9;
+	transition: 0s;
+}
+
+.tab_wrap {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 15px 0;
+}
+
+/*.tab_wrap:after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #917347;
+  order: -1;
+}*/
+
+.tab_label {
+	position: relative;
+	/* background-colorは個別設定 */
+	color: #fff;
+	font-family: 'RocknRoll One', sans-serif;
+	text-align: center;
+	letter-spacing: .08em;
+	white-space: nowrap;
+	padding: 10px .5em;
+	margin-right: 2px;
+	order: -1;
+	z-index: 1;
+	cursor: pointer;
+	border-radius: 18px 18px 0 0;
+	border: solid #febd3d; /* color as placeholder */
+	border-width: 2px 2px 0 2px;
+	flex: 1;
+}
+
+.tab_label span.period {
+	/* font-family: 'Open Sans', sans-serif; */
+	display: block;
+	font-size: 1rem;
+}
+
+.label_01 {
+	background-color: #febd3d;
+	border-color: #febd3d;
+}
+
+.label_02 {
+	background-color: #febd3d;
+	border-color: #febd3d;
+}
+
+.label_03 {
+	background-color: #febd3d;
+	border-color: #febd3d;
+}
+
+.label_04 {
+	background-color: #9BDA11;
+	border-color: #9BDA11;
+}
+
+.tab_label:last-of-type {
+	margin-right: 0;
+}
+
+.tab_content {
+	width: 100%; /* 360/360 */
+	background-color: #ffffef;
+	border: solid #eee8c3/*#917347*/;
+	border-width: 0 2px;
+	padding: 40px;
+	display: none;
+}
+
+.tab_switch:checked+.tab_label {
+	background: #ffffef;
+	color: #febd3d;
+	border: solid #eee8c3/*#917347*/;
+	border-width: 2px 2px 0 2px;
+}
+
+.tab_switch:checked+.tab_label.label_04 { 
+	color: #9BDA11;
+}
+
+.tab_switch:checked+.tab_label+.tab_content {
+	display: block;
+}
+
+.tab_switch {
+    display: none;
+}
+
+.menu_item {
+	margin-bottom: 50px;
+}
+
+.menu_item:last-child {
+	margin-bottom: 0px;
+}
+
+.menu_item img {
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.plate, .drink_menu > p:first-child {
+	font-family: 'RocknRoll One';
+	font-size: 2rem;
+	letter-spacing: .1em;
+}
+
+.plate, .drink_menu > p:nth-child(2) {
+	margin-bottom: 0;
+}
+
+.price {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.4rem;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+.price .unit {
+	font-size: 1.1rem;
+}
+
+.price::after {
+	content: "円";
+	display: inline;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 1.1rem;
+	padding-left: .2rem;
+}
+
+.drink_01, .drink_02 {
+	width: 22.916%; /*82.5/360*/
+	display: flex;
+	align-items: center;
+}
+
+.drink_menu {
+	width: 100%;
+	background-color: #ffffef;
+	border: solid #eee8c3;
+	border-width: 0 2px 2px 2px;
+	border-radius: 0 0 15px 15px;
+	padding: 20px 20px 50px;
+}
+
+.drink_menu .text {
+	text-align: left;
+	margin: 0 auto;
+}
+
+.drink_menu .category {
+	font-weight: bold;
+	margin-bottom:10px;
+}
+
+.drink_list {
+	display: flex;
+	justify-content: space-around;
+}
+
+.drink_list ul li {
+	list-style-marker: none;
+	line-height: 3rem;
+}
+
+.slide_area .slick-slide {
+	margin: 20px;
+}
+
+/* slick */
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    color: #febd3d;
+}
+/* slick -end*/
+
+.togo_item {
+	margin: 0 auto;
+	/* distorted square */
+	background-color: #eee8c3/*#ffffef*/;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.togo_item:nth-child(odd) {
+	border-radius: 40% 40% 38% 32% / 25% 50% 50% 48%;
+}
+
+.togo_item:nth-child(even) {
+	border-radius: 30% 50% 50% 50% / 40% 40% 50% 40%;
+}
+
+.togo_item .togo_photo {
+	width: 73.221%; /* 175/239 */
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.togo_item h3 {
+	font-size: 2rem;
+	margin-bottom: 5px;
+}
+
+.togo_item .price {
+	font-size: .8em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.twit_widget {
+	width: 100%;
+	border-radius: 20px;
+	padding: 5%;
+	margin-bottom: 15px;
+	background-color:#ffffef;
+}
+
+.line_banner {
+	position: relative;
+	box-shadow: 2px 2px 5px rgba(145, 115, 71,.4);
+	transition: 0s;
+}
+
+.line_banner:hover {
+	opacity: .6;
+	box-shadow: none;
+	top: 2px;
+	left: 2px;
+	transition: 0s;
+}
+
+.line_banner img {
+	border-radius: 2px;
+}
+
+.twit_widget iframe {
+}
+
+.appearance {
+	margin-bottom: 22px;
+}
+
+.top_btn {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+#access .map {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#access .map img {
+	border-radius: 10px;
+}
+
+#access .base_info {
+	font-family:'Open Sans','Noto Sans JP',sans-serif;
+	font-size: .8em;
+	text-align: center;
+}
+
+#access .base_info .bldgs {
+	display: inline-block;
+}
+
+#access .base_info h3 {
+	font-size: 1.8rem;
+	margin-bottom: .2rem;
+}
+
+#access .base_info section {
+	margin-bottom: 1rem;
+}
+
+footer .copyright {
+	font-family:'Open Sans','Noto Sans JP',sans-serif;
+	font-size: .8em;
+	margin-bottom: 60px;
+}
+
+/*--------------------------
+	1025px以上のPC 設定/（ページ幅1025pxで中央寄せ）
+    ターゲットサイズ：1366pxを想定
+-------------------------- */
+
+@media screen and (min-width:1025px) {
+	#wrapper, .head_wrapper, .foot_wrapper {
+		width: 75.036%; /* 1025/1366 */
+	}
+
+	header {
+		margin-bottom: 0px;
+	}
+
+	header h1 {
+		width: 25.622%; /* 350/1366 */
+		margin-bottom: 15px;
+	}
+
+	.egg_child {
+		top: auto;
+		bottom: 10%;
+		right: 10%;
+		width: 30%;
+	}
+	
+	.egg_catch {
+		left: 15%;
+		font-size: 2.5vw;
+	}
+
+	.g_nav_bg {
+		background-color: #eee8c3;
+	}
+
+	.g_nav {
+		position: relative;
+		box-shadow: none;
+		margin-bottom: 100px;
+	}
+	
+	.equation {
+		width: 100%;
+		margin: 0 auto 40px;
+	}
+	
+	.equation .term {
+		width: 25%; /* 190/760 */
+	}
+
+	#kodawari, #menu, #togo, #info {
+		width: 74.146%; /* 760/1025 */;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.actions li {
+		width: 31.578%; /* 240/760 */
+		padding: 15px;
+	}
+
+	.actions li .icon {
+		width: 70.833%; /* 170/240 */
+	}
+
+	.all_menu {
+		width: 65.789%; /* 500/760 */
+	}
+	
+	.tab_content, .drink_menu {
+		width: 100%;
+	}
+	
+	.menu_item {
+		width: 65.789%; /* 500/760 */
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.drink_01 {
+		width: 31.578%; /* 240/760 */
+		/*padding: 45px;*/
+	}
+	
+	.twit_widget {
+		width: 100%;
+	}
+	
+	#access .map {
+		width: 61.463%; /* 630/1025 */
+	}
+
+	#access .base_info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 36.097%; /* 370/1025 */
+		text-align: left;
+		margin-left: 20px;
+		margin-bottom: 30px;
+	}
+
+	#access .base_info p {
+		padding-left: .5rem;
+	}
+	
+	#access .access_info {
+		display: flex;
+		justify-content: space-between;
+		width: 74.146%; /* 760/1025 */;
+		margin: 0 auto;
+	}
+	.top_btn {
+		margin-right: 10px;
+	}
+
+	footer .copyright {
+		margin-bottom: 0;
+		padding: 10px;
+		background-color: #734e30;
+		color: #ffffef;
+	}
+}
